@@ -1,0 +1,28 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Data</title>
+</head>
+<body>
+  <h1>User Data</h1>
+  <ul>
+    <!-- <% result.forEach(user => { %>
+      <li><%= user.name %></li>
+    <% }); %> -->
+
+    <% if (result.length > 0) { %>
+        <% result.forEach(user => { %>
+                <h3 class="title"> <%= user.firstName %> </h3>
+                <h3 class="snippet"> <%= user.lastName %> </h3>
+                <h3 class="snippet"> <%= user.gender %> </h3>
+                <h3 class="snippet"> <%= user.userDOB %> </h3>
+        <% }) %>
+    <% } else { %>
+        <p>There are no users to display</p>
+    <% } %>
+  </ul>
+</body>
+</html>
