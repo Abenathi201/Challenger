@@ -15,8 +15,10 @@
 
     <% if (result.length > 0) { %>
         <% result.forEach(user => { %>
-                <h3 class="title"> <%= user.firstName %> </h3>
-                <h3 class="snippet"> <%= user.lastName %> </h3>
+          <a href="/single/<%= result.id %>">
+            <h3> <%= user.firstName %> </h3>
+            <h3> <%= user.lastName %> </h3>   
+          </a>
                 <h3 class="snippet"> <%= user.gender %> </h3>
                 <h3 class="snippet"> <%= user.userDOB %> </h3>
         <% }) %>
